@@ -1,0 +1,10 @@
+.filter-search {
+    display: flex;
+    width: 30%;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.filter-search__btn {
+    margin-left: 10px;
+}
