@@ -1,0 +1,21 @@
+.modal__column {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.modal__column-title {
+    width: 50%;
+    margin: 0;
+}
+.modal__column-visibility {
+    margin: 0;
+}
+.modal__column-visible {
+    color: green;
+}
+.modal__column-hidden {
+    color: red;
+}
+.modal__column-btn {
+    margin-left: 20px;
+}

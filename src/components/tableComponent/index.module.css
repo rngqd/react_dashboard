@@ -1,0 +1,34 @@
+.table__filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.table__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.table__add-col {
+    display: flex;
+}
+
+.table__container {
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.table__title {
+    width: 20vw;
+    max-width: 300px;
+}
+
+.table__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 40vw;
+    max-width: 500px;
+}

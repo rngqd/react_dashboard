@@ -1,8 +1,7 @@
 .filter-search {
     display: flex;
-    width: 30%;
+    min-width: 270px;
     max-width: 300px;
-    margin: 20px auto;
 }
 
 .filter-search__btn {

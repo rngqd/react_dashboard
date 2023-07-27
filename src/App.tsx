@@ -1,23 +1,26 @@
-import * as React from 'react'
 import '@/css/App.css'
-import Dashboard from '@/components/dashboard'
-import Loader from '@/components/loader'
+import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import useStore from '@/store';
-import FilterSearch from '@/components/filterSearch';
+
+import Dashboard from '@/pages/dashboard'
+import About from '@/pages/about';
 
 useStore.getState().fetchTableData()
+
 function App() {
-    const isLoading = useStore(({loading}) => loading)
-    
+    const { selectedNews } = useStore()
     return (
-        <>
-            <FilterSearch/>
-            { isLoading ?
-                    <Loader/> :
-                    <Dashboard/>
-            }
-        </>
-      )
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={ <Dashboard/>} />
+                <Route path="/about" element={ !selectedNews ? <Navigate to="/" replace /> : <About/>} />
+                <Route
+                    path="*"
+                    element={<Navigate to="/" replace />}
+                />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default App
